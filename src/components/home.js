@@ -6,7 +6,11 @@ import products from "../constants/products";
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      {products.map((item) => (
+        <Link key={item.id} to={`/products/${item.id}`}>
+          {item.name}
+        </Link>
+      ))}
     </div>
   );
 };
