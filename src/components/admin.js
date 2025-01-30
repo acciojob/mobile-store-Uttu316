@@ -7,13 +7,11 @@ function Admin() {
     <div>
       <h1>Admin Panel</h1>
       <ul>
-        {products.map((product) => (
-          <p key={product.id}>
-            <Link to={`/admin/products/${product.id}`}>
-              {product.name} - ${product.price}
-            </Link>
-          </p>
-        ))}
+        <p key={products[0].id}>
+          <Link to={`/admin/products/${products[0].id}`}>
+            {products[0].name} - ${products[0].price}
+          </Link>
+        </p>
       </ul>
     </div>
   );
