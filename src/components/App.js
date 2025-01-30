@@ -5,6 +5,7 @@ import Home from "./home";
 import Header from "./header";
 import Admin from "./admin";
 import Product from "./product";
+import AdminProdcut from "./adminProduct";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/products/:id" element={<Product />} />
-        {/* <Route path="/admin/product/:id" element={} /> */}
+        <Route path="/admin/product/:id" element={<AdminProdcut />} />
       </Routes>
     </BrowserRouter>
   );

@@ -6,9 +6,14 @@ import products from "../constants/products";
 const Admin = () => {
   return (
     <div>
-      <h1>Admin</h1>
+      <button>Add Product</button>
+      {products.map((item) => (
+        <p key={item.id}>
+          <Link to={`/admin/product/${item.id}`}>{item.name}</Link>
+        </p>
+      ))}
     </div>
   );
 };
 
-export default Admin; // Ensure this export is correct
+export default Admin;
