@@ -1,19 +1,22 @@
-// src/components/Home.js
 import React from "react";
-import { Link } from "react-router-dom";
 import products from "../constants/products";
+import { Link } from "react-router-dom";
 
-const Admin = () => {
+function Admin() {
   return (
     <div>
-      <button>Add Product</button>
-      {products.map((item) => (
-        <p key={item.id}>
-          <Link to={`/admin/product/${item.id}`}>{item.name}</Link>
-        </p>
-      ))}
+      <h1>Admin Panel</h1>
+      <ul>
+        {products.map((product) => (
+          <p key={product.id}>
+            <Link to={`/admin/products/${product.id}`}>
+              {product.name} - ${product.price}
+            </Link>
+          </p>
+        ))}
+      </ul>
     </div>
   );
-};
+}
 
 export default Admin;
